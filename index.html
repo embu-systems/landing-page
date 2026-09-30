@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EMBU — Software Engineering</title>
+<meta name="description" content="EMBU builds web applications, mobile products, backend systems and AI solutions from idea to production.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="header-row">
+    <a href="#top" class="logo">EMBU</a>
+    <div class="header-right">
+      <nav class="main-nav" id="mainNav">
+        <a href="#work" data-nav="work">Work</a>
+        <a href="#services" data-nav="services">Services</a>
+        <a href="#about" data-nav="about">About</a>
+        <a href="#contact" data-nav="contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn-outline">Start a project</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <section id="top" class="hero" id="heroSection">
+    <div class="hero-copy">
+      <div class="eyebrow hero-num" data-reveal><span>01</span><span class="rule"></span></div>
+      <h1>
+        <span class="line" data-reveal data-delay="80">We build <span class="accent">software</span></span>
+        <span class="line" data-reveal data-delay="200">for real businesses.</span>
+      </h1>
+      <p class="lead" data-reveal data-delay="340">Web applications, mobile products, backend systems and AI solutions from idea to production.</p>
+      <div class="hero-actions" data-reveal data-delay="460">
+        <a href="#contact" class="btn-primary">Start a project</a>
+        <a href="#work" class="link-underline">View our work</a>
+      </div>
+    </div>
+
+    <div class="hero-visual" data-reveal data-delay="200">
+      <div class="laptop" id="laptop">
+        <div class="laptop-body">
+          <div class="laptop-screen">
+            <div class="laptop-nav">
+              <div class="app-name">ISH <span class="sub">Employer</span></div>
+              <div id="ishNav"></div>
+            </div>
+            <div class="laptop-main">
+              <div class="laptop-main-head">
+                <div>
+                  <div class="role">Frontend Developer · Remote</div>
+                  <div class="title">Candidates</div>
+                </div>
+                <div class="live-indicator"><span class="live-dot" id="liveDot"></span>Receiving applications</div>
+              </div>
+              <div class="stage-chips" id="stageChips"></div>
+              <div id="feedRows"></div>
+              <div class="feed-empty" id="feedEmpty" hidden>No candidates in this stage yet.</div>
+            </div>
+          </div>
+        </div>
+        <div class="laptop-hinge"><span></span></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section class="section marquee-section">
+  <div class="marquee-row">
+    <div class="marquee-label">Products<br>we've shipped</div>
+    <div class="marquee-viewport">
+      <div class="marquee-track" id="marqueeTrack"></div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="section">
+  <div class="wrap section-pad">
+    <div class="section-head-row" data-reveal>
+      <div class="eyebrow"><span>02</span><span class="rule"></span><span>SELECTED WORK</span></div>
+      <div class="work-hint">Live prototypes — click around</div>
+    </div>
+
+    <div class="featured-grid">
+      <!-- Leader Fit -->
+      <article data-reveal>
+        <div class="featured-card">
+          <div class="lf-dashboard">
+            <div class="lf-nav">
+              <div class="brand">Leader Fit</div>
+              <div id="lfNav"></div>
+            </div>
+            <div class="lf-main">
+              <div class="lf-main-head">
+                <div class="title">Clients</div>
+                <div class="lf-add">+ Add client</div>
+              </div>
+              <div class="lf-search">Search clients…</div>
+              <div id="lfClients"></div>
+            </div>
+          </div>
+          <div class="lf-phone-wrap">
+            <div class="phone">
+              <div class="phone-screen lf-phone-screen">
+                <div class="phone-statusbar"><span>9:41</span><span class="notch"></span><span class="sig">5G</span></div>
+                <div>
+                  <div class="lf-greeting">Good morning,</div>
+                  <div class="lf-firstname" id="lfFirst"></div>
+                </div>
+                <div class="lf-plan-card" id="lfPlanCard">
+                  <div class="plan" id="lfPlan"></div>
+                  <div class="headline" id="lfHeadline"></div>
+                  <div class="note" id="lfNote"></div>
+                </div>
+                <button class="lf-action-btn" id="lfActionBtn"></button>
+                <div class="lf-workout-label">Today's workout</div>
+                <div class="lf-workout-card">
+                  <div class="name" id="lfWorkout"></div>
+                  <div class="note" id="lfWorkoutNote"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="featured-meta">
+          <div>
+            <h3>Leader Fit</h3>
+            <div class="desc">Fitness management ecosystem</div>
+            <div class="tags">Web / Mobile / Backend</div>
+            <button class="case-link" data-open-case="leaderfit">Read case study</button>
+          </div>
+          <div class="note">Pick a client, check in from the app — the dashboard syncs.</div>
+        </div>
+      </article>
+
+      <!-- ISH -->
+      <article data-reveal data-delay="120">
+        <div class="featured-card">
+          <div class="ish-phone-1">
+            <div class="phone">
+              <div class="phone-screen">
+                <div class="phone-statusbar"><span>9:41</span><span class="notch"></span><span class="sig">5G</span></div>
+                <div class="ish-search-headline">Find a job without borders</div>
+                <input class="ish-input" id="jobQuery" placeholder="Type a role…">
+                <div class="job-featured-title" id="featuredTitle"></div>
+                <div id="featuredJobs"></div>
+                <div class="job-empty" id="featuredEmpty" hidden>Nothing yet — try "design" or "backend".</div>
+              </div>
+            </div>
+          </div>
+          <div class="ish-phone-2">
+            <div class="phone">
+              <div class="phone-screen">
+                <div class="phone-statusbar"><span>9:41</span><span class="notch"></span><span class="sig">5G</span></div>
+                <div class="ish-brand-row"><span class="brand">ISH</span><span class="saved" id="savedLabel"></span></div>
+                <div class="job-filter-row" id="jobFilterChips"></div>
+                <div id="jobRows"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="featured-meta">
+          <div>
+            <h3>ISH</h3>
+            <div class="desc">Job marketplace</div>
+            <div class="tags">Mobile / Backend / Infrastructure</div>
+            <button class="case-link" data-open-case="ish">Read case study</button>
+          </div>
+          <div class="note">Search a role, filter the feed, save a job.</div>
+        </div>
+      </article>
+    </div>
+
+    <div class="more-work-head" data-reveal>
+      <h3>More work</h3>
+      <div class="pfilter-row" id="pfilterRow"></div>
+    </div>
+    <div class="project-grid" id="projectGrid"></div>
+  </div>
+</section>
+
+<section id="services" class="section">
+  <div class="wrap section-pad">
+    <div class="services-head" data-reveal>
+      <div class="eyebrow"><span>03</span><span class="rule"></span><span>SERVICES</span></div>
+      <p>From product architecture to production. We help businesses design, build and scale digital products.</p>
+    </div>
+    <div class="services-list" id="servicesList" data-reveal></div>
+    <div class="service-detail" id="serviceDetail"></div>
+  </div>
+</section>
+
+<section id="process" class="section">
+  <div class="wrap section-pad">
+    <div class="services-head" data-reveal>
+      <div class="eyebrow"><span>04</span><span class="rule"></span><span>PROCESS</span></div>
+      <p>A clear rhythm from the first call to launch. You always know what is built, what is next, and why.</p>
+    </div>
+    <div class="process-grid" data-reveal>
+      <div class="process-steps" id="processSteps"></div>
+      <div class="step-detail" id="stepDetail"></div>
+    </div>
+  </div>
+</section>
+
+<section id="engage" class="section">
+  <div class="wrap section-pad">
+    <div class="eyebrow" data-reveal style="margin-bottom:clamp(40px,5vw,64px)"><span>05</span><span class="rule"></span><span>WAYS TO WORK TOGETHER</span></div>
+    <div class="engage-grid" id="engageGrid" data-reveal></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap section-pad">
+    <div class="quotes-head" data-reveal>
+      <div class="eyebrow"><span>06</span><span class="rule"></span><span>CLIENTS</span></div>
+      <div class="quotes-controls">
+        <span class="quote-count mono" id="quoteCount"></span>
+        <button class="quote-arrow" id="prevQuote" aria-label="Previous">←</button>
+        <button class="quote-arrow" id="nextQuote" aria-label="Next">→</button>
+      </div>
+    </div>
+    <div data-reveal>
+      <blockquote id="quoteBlock">
+        <p id="quoteText"></p>
+        <footer><span class="who" id="quoteWho"></span><span class="org" id="quoteOrg"></span></footer>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="section">
+  <div class="wrap section-pad">
+    <div class="eyebrow" data-reveal style="margin-bottom:clamp(36px,4vw,56px)"><span>07</span><span class="rule"></span><span>ABOUT</span></div>
+    <div class="about-grid">
+      <p class="about-statement" data-reveal>EMBU is a software engineering company building digital products from idea to production.</p>
+      <p class="about-support" data-reveal data-delay="140">We combine engineering, product thinking and careful execution to create software that is useful, reliable and built to grow.</p>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="section">
+  <div class="wrap section-pad faq-grid">
+    <div data-reveal>
+      <div class="eyebrow"><span>08</span><span class="rule"></span><span>QUESTIONS</span></div>
+      <h2 class="faq-title">Before you ask.</h2>
+    </div>
+    <div data-reveal data-delay="120" id="faqList"></div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="wrap section-pad contact-grid">
+    <div class="contact-head" data-reveal>
+      <div class="eyebrow"><span>09</span><span class="rule"></span><span>LET'S BUILD</span></div>
+      <h2>Have something<br>worth building?</h2>
+      <p>Tell us about your project.</p>
+    </div>
+
+    <div data-reveal data-delay="140">
+      <div class="contact-form" id="contactForm">
+        <div>
+          <div class="field-label">What are you building?</div>
+          <div class="chip-row" id="typeChips"></div>
+        </div>
+        <div>
+          <div class="field-label">Timeline</div>
+          <div class="chip-row" id="timeChips"></div>
+        </div>
+        <div class="contact-fields">
+          <input class="email-input" id="emailInput" type="email" placeholder="you@company.com">
+          <button class="submit-btn" id="submitBtn">Start a project</button>
+        </div>
+        <div class="form-hint" id="formHint"></div>
+      </div>
+      <div class="contact-form" id="sentPanel" hidden style="display:none">
+        <div class="sent-title">Thanks. We'll reply within one business day.</div>
+        <div class="sent-summary" id="sentSummary"></div>
+        <button class="case-link" id="resetBtn" style="align-self:flex-start">Send another</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-row">
+    <div class="footer-brand">
+      <span class="name">EMBU</span>
+      <span>Software Engineering</span>
+    </div>
+    <nav class="footer-nav">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="footer-links">
+      <a href="#" rel="noopener">LinkedIn</a>
+      <a href="#" rel="noopener">GitHub</a>
+      <a href="mailto:hello@embu.dev">hello@embu.dev</a>
+    </div>
+  </div>
+</footer>
+
+<div class="drawer-overlay" id="drawerOverlay">
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawer-head">
+      <span class="eyebrow-mono" id="drawerYear"></span>
+      <button class="drawer-close" id="drawerClose">Close</button>
+    </div>
+    <h2 id="drawerName"></h2>
+    <p class="drawer-summary" id="drawerSummary"></p>
+    <div class="drawer-tagline" id="drawerTagline"></div>
+    <div class="drawer-sections">
+      <div class="drawer-row">
+        <div class="label">Challenge</div>
+        <p id="drawerChallenge"></p>
+      </div>
+      <div class="drawer-row">
+        <div class="label">Solution</div>
+        <p id="drawerSolution"></p>
+      </div>
+      <div class="drawer-row">
+        <div class="label">What we built</div>
+        <div class="drawer-built" id="drawerBuilt"></div>
+      </div>
+      <div class="drawer-row last">
+        <div class="label">Stack</div>
+        <div class="drawer-stack" id="drawerStack"></div>
+      </div>
+    </div>
+    <div class="drawer-actions">
+      <button class="btn-primary" id="drawerSimilar" style="border:none">Start a similar project</button>
+      <button class="case-link" id="drawerNext"></button>
+    </div>
+  </aside>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
